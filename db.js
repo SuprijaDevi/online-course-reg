@@ -14,6 +14,31 @@ async function connectToDatabase() {
 }
 
 connectToDatabase();
+const reg1Schema =new mongoose.Schema({
+name: {
+  type: String,
+  required: true,
+},
+dob: {
+  type: Date,
+  required: true,
+},
+phoneNumber: {
+  type: String,
+  required: true,
+},
+studentId:{
+  type: String,
+  required: true,
+  unique: true,
+},
+collegeName:{
+  type: String,
+  required: true,
+},
+});
+const reg1 = mongoose.model("reg1", reg1Schema);
+
 
 const newSchema = new mongoose.Schema({
   username: {
@@ -39,8 +64,5 @@ const newSchema = new mongoose.Schema({
   },
 });
 
-// Define a unique index on the email field for efficient validation
-// Define a model for the user schema
 const collection = mongoose.model("collection", newSchema);
-
-module.exports = collection
+module.exports = {collection,reg1};

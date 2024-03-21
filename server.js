@@ -1,5 +1,6 @@
 const express = require("express");
-const User = require("./db.js"); // Assuming you've changed the schema to include additional fields and renamed the collection to 'User'
+const User = require("./db.js").collection;
+const Register = require("./db.js").reg1;  // Assuming you've changed the schema to include additional fields and renamed the collection to 'User'
 const cors = require("cors");
 const app = express();
 app.use(express.json());
@@ -51,6 +52,33 @@ app.post("/Signup", async (req, res) => {
     res.json("fail");
   }
 });
+
+app.post("/Register", async (req, res) => {
+  const { name, dob, phoneNumber, studentId, collegeName,} = req.body; 
+
+  const RegisterData = {
+    name: name,
+    dob: dob,
+    phoneNumber: phoneNumber,
+    studentId: studentId,
+    collegeName: collegeName,
+  };
+
+  try {
+    const check = await Register.findOne({ studentId: studentId });
+
+    if (check) {
+      res.json("Already reg");
+    } else {
+      await Register.create(RegisterData); 
+
+      res.json("notreg");
+    }
+  } catch (e) {
+    res.json("fail");ṇ
+  }
+});
+
 
 app.listen(8000, () => {
   console.log("port connected");

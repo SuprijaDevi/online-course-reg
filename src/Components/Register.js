@@ -1,28 +1,9 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 function Register() {
-
-  // const [formData, setFormData] = useState({
-  //   name: '',
-  //   dob: '',
-  //   phoneNumber: '',
-  //   studentId: '',
-  //   collegeName: '',
-  // });
-
-  // const handleChange = (e) => {
-  //   setFormData({
-  //     ...formData,
-  //     [e.target.name]: e.target.value,
-  //   });
-  // };
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-
-  //   console.log('Form data submitted:', formData);
-  // };
+  const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (event) => {
@@ -41,6 +22,7 @@ function Register() {
       const response = await axios.post('http://localhost:8000/Register', formData);
       console.log('Register successful:', response.data);
       window.alert('Register successful!');
+      navigate('/home');
     } catch (error) {
       window.alert('Register failed:', error);
     } finally {

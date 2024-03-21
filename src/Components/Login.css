@@ -1,18 +1,17 @@
 /* Login.css */
 
 .signup-container {
-  /* background-image: url('https://img.freepik.com/premium-photo/online-learning-design-concept-top-view-student-table-with-computer-headphone-stationeries-blue-table-background_315337-4613.jpg?size=626&ext=jpg&ga=GA1.1.735520172.1710806400&semt=ais'); */
   background-repeat: no-repeat; 
   max-width: 400px;
   margin: auto;
   margin-top: 3%;
   margin-left: 55%;
-  padding: 20px;
+  padding: 30px;
   border: 0px solid #ccc;
   backdrop-filter: blur(15px);
   border-radius: 5px;
   box-shadow: 0 0 10px rgb(36, 105, 173);
-  background-color: transparent;
+  background-color: black;
 }
 
 
@@ -21,17 +20,24 @@
   margin: auto;
   margin-top: 10%;
   margin-left: 55%;
-  padding: 20px;
+  padding: 30px;
   border: 0px solid #ccc;
-  backdrop-filter: blur(35px);
+  backdrop-filter: blur(15px);
   border-radius: 5px;
   box-shadow: 0 0 10px rgb(36, 105, 173);
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.908);
 }
 
 .signup-container h2 {
     text-align: left;
     color:#007bff;
+  }
+  h2 {
+    color: #007bff;
+  }
+  p {
+    color:#ccc;
+    font-family: verdana;
   }
   
   .signup-form {
@@ -43,6 +49,8 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 16px;
+    color: #ccc;
+    font-family: Verdana;
   }
   
   label {
@@ -79,7 +87,6 @@
   body {
     background-image: url("https://img.freepik.com/free-photo/flat-lay-photo-office-desk-with-laptop-copy-space-background_1150-45598.jpg?size=626&ext=jpg&ga=GA1.1.2082370165.1710633600&semt=ais");
     background-repeat: no-repeat;
-    /* background-size: cover; */
     background-size: 100%;
   }
   
