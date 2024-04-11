@@ -109,7 +109,7 @@ export default function Home() {
             </CardContent>
           </CardActionArea>
           <CardActions>
-            <Button component = {Link} to = "/register" size="small" color="primary">
+            <Button component = {Link} to = "/Register" size="small" color="primary">
               Register
             </Button>
           </CardActions>
@@ -134,7 +134,7 @@ export default function Home() {
       </CardContent>
     </CardActionArea>
     <CardActions>
-      <Button size="small" color="primary">
+      <Button component = {Link} to = "/Register" size="small" color="primary">
         Register
       </Button>
     </CardActions>
@@ -158,7 +158,7 @@ export default function Home() {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
+        <Button component = {Link} to = "/Register" size="small" color="primary">
           Register
         </Button>
       </CardActions>
@@ -181,7 +181,7 @@ export default function Home() {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
+        <Button component = {Link} to = "/Register" size="small" color="primary">
           Register
         </Button>
       </CardActions>
@@ -205,7 +205,7 @@ export default function Home() {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
+        <Button component = {Link} to = "/Register" size="small" color="primary">
           Register
         </Button>
       </CardActions>
@@ -229,7 +229,7 @@ export default function Home() {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
+        <Button component = {Link} to = "/Register" size="small" color="primary">
           Register
         </Button>
       </CardActions>

@@ -79,6 +79,21 @@ app.post("/Register", async (req, res) => {
   }
 });
 
+app.get("/Admin", async (req, res) => {
+  try {
+    // Assume you have admin authentication middleware to verify admin access
+    const isAdmin = true;  // Set isAdmin to true if admin authentication is successful
+
+    if (isAdmin) {
+      const users = await User.find();  // Fetch all users
+      res.json(users);
+    } else {
+      res.status(403).json({ message: 'Unauthorized' });
+    }
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
 
 app.listen(8000, () => {
   console.log("port connected");

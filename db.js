@@ -65,4 +65,24 @@ const newSchema = new mongoose.Schema({
 });
 
 const collection = mongoose.model("collection", newSchema);
-module.exports = {collection,reg1};
+
+const adminSchema = new mongoose.Schema({
+  username: {
+    type: String,
+    required: true,
+    unique: true,
+  },
+  email: {
+    type: String,
+    required: true,
+    unique: true,
+  },
+  password: {
+    type: String,
+    required: true,
+  },
+});
+
+
+const Admin = mongoose.model('Admin', adminSchema);
+module.exports = {collection,reg1,Admin};
